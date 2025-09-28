@@ -1,0 +1,127 @@
+/* style.css - Mobile Optimized */
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+  background: #fff;
+  padding: 10px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+h1 {
+  text-align: center;
+  color: #2d6a4f;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.juice-item {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.juice-info {
+  margin-bottom: 10px;
+}
+
+.juice-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d6a4f;
+  margin-bottom: 3px;
+}
+
+.juice-benefit {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter button {
+  background: #2d6a4f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.counter span {
+  font-size: 16px;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+}
+
+.total-section {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 10px;
+  border-top: 2px solid #eee;
+  text-align: center;
+}
+
+.total-section h2 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #1b4332;
+}
+
+#payButton {
+  width: 100%;
+  background: #1b4332;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+#payButton:hover {
+  background: #40916c;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  font-size: 12px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.footer strong {
+  color: #2d6a4f;
+}
