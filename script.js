@@ -61,13 +61,13 @@ function updateTotal() {
   for (let id in cart) {
     total += cart[id] * juices.find(j => j.id == id).price;
   }
-  totalEl.textContent = total;
+  totalEl.textContent = total.toFixed(2); // ensure two decimals
 }
 
 function generateUPILink() {
-  let total = parseInt(totalEl.textContent);
-  if (total === 0) {
-    alert("Please select at least one juice.");
+  let total = parseFloat(totalEl.textContent);
+  if (!total || total <= 0) {
+    alert("Please select at least one juice before proceeding to payment.");
     return;
   }
 
@@ -84,8 +84,9 @@ function generateUPILink() {
   let transactionNote = (itemCount > 1) ? "Organic Juice" : note.join(", ");
   let upiId = "q580583273@ybl";
   let name = "Ravi P";
+  let amountStr = total.toFixed(2); // ensure two decimals
 
-  let upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${total}&tn=${encodeURIComponent(transactionNote)}`;
+  let upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(name)}&am=${encodeURIComponent(amountStr)}&cu=INR&tn=${encodeURIComponent(transactionNote)}`;
 
   window.location.href = upiLink;
 }
